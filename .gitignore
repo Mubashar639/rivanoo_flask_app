@@ -1,0 +1,107 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Flask specific
+instance/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# PyInstaller
+#  Usually these files are written in the main directory
+#  of a project (next to setup.py)
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Pytest
+.coverage
+.cache/
+
+# Translations
+*.mo
+*.pot
+
+# Documentation
+docs/_build/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# SQL
+*.sqlite3
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Flask specific
+instance/
+uploads/
+downloads/
+
+# Editor artifacts
+*.sublime-project
+*.sublime-workspace
+.idea/
+.vscode/
+*.swp
+*~
+
+# Logs and database
+*.log
+*.sqlite
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+coverage.*
+.cache
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json

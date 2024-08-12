@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File - Rivanoo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+        }
+        .box {
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px;
+            background-color: #f0f4ff;
+            color: #007bff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+        .logo-title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .title {
+            text-align: center;
+            width: 100%;
+            font-size: 2.5rem;
+            color: #000;
+            font-weight: 600;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .row {
+            justify-content: center;
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: #007bff;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        .form-group label {
+            color: #007bff;
+            font-weight: 600;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="logo-title-container">
+            <a href="{{ url_for('main.home') }}">
+                <img src="{{ url_for('static', filename='images/png.avif') }}" alt="Rivanoo Logo" class="logo">
+            </a>
+            <h1 class="title">Upload {{ menu_type.title() }} File</h1>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6 box mx-auto">
+                <form action="{{ url_for('main.upload_file') }}" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="menu_type" value="{{ menu_type }}">
+                    <div class="form-group">
+                        <label for="file">Choose {{ 'PDF' if menu_type == 'germany' else 'Excel' }} file:</label>
+                        <input type="file" class="form-control-file" id="file" name="file" accept="{{ '.pdf' if menu_type == 'germany' else '.xlsx' }}" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

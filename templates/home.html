@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivanoo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="google-site-verification" content="8HAcGDcqgP9i-NTRmWWHBc_l5YkiNWpeubWJEOFqQoY" />
+    <style>
+        body {
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+        }
+        .box {
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            padding: 20px;
+            cursor: pointer;
+            text-align: center;
+            margin: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #f0f4ff; /* Softer background color for the boxes */
+            color: #007bff;
+        }
+        .box img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+        .logo-title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .title {
+            text-align: center;
+            width: 100%;
+            font-size: 2.5rem;
+            color: #000; /* Set title color to black */
+            font-weight: 600; /* Use a bolder weight for the title */
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .row {
+            justify-content: center;
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: #007bff;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600; /* Use a bolder weight for the headings */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="logo-title-container">
+            <img src="{{ url_for('static', filename='images/png.avif') }}" alt="Rivanoo Logo" class="logo">
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-3 box" onclick="window.location.href='/menu/germany'">
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" alt="Germany Flag">
+                <h2>Germany apps.</h2>
+            </div>
+            <div class="col-md-3 box" onclick="window.location.href='/menu/sweden'">
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/4c/Flag_of_Sweden.svg" alt="Sweden Flag">
+                <h2>Sweden apps</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
